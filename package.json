@@ -1,0 +1,26 @@
+{
+  "name": "conference-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jprix/conferenceSetup.git"
+  },
+  "author": "Lorenzo Fontana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jprix/conferenceSetup/issues"
+  },
+  "homepage": "https://github.com/jprix/conferenceSetup#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "request": "^2.88.0"
+  }
+}

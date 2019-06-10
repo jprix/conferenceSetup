@@ -1,0 +1,41 @@
+{
+    "record": "true",
+    "beepOnEntry": "true",
+    "entryGreeting": "this is a test conference",
+    "participants": [{
+            "Name": "Jay",
+            "department": "Car Insurance",
+            "participantPhone": "+16318721739",
+            "sipUri": "jsonp@sip.twilio.com",
+            "isMod": true,
+            "phoneType": "sip"
+
+        }, {
+            "Name": "rob",
+            "department": "Lawyer",
+            "participantPhone": "+15407551797",
+            "sipUri": "rob@sip.twilio.com",
+            "isMod": false,
+            "phoneType": "e164"
+
+        },
+        {
+            "Name": "anthony",
+            "department": "Claim Processor",
+            "participantPhone": "+15166399104",
+            "sipUri": "anthony@sip.twilio.com",
+            "isMod": false,
+            "phoneType": "e164"
+
+        }, {
+            "Name": "CEO",
+            "department": "Claim Processor",
+            "participantPhone": "+18153073121",
+            "sipUri": "lisa@sip.twilio.com",
+            "isMod": false,
+            "phoneType": "sip"
+
+        }
+    ]
+
+}
