@@ -237,13 +237,16 @@ input[type="checkbox"] + label.invalid-field span:before {
     /* background-color: inherit; */
     border-radius: 3px;
     visibility: hidden;
-    transition-timing-function: ease-in;
-    transition-duration: 0.40s;
+    
     z-index: 2;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+.touch  .loader-overlay {
+    transition-timing-function: ease-in;
+    transition-duration: 0.40s;
 }
 .loader-overlay.focusing {
     visibility: visible;
