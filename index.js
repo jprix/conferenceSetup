@@ -27,7 +27,7 @@ router.get ('/', (req, res) => {
 });
 
 router.post ('/createConference', (req, res) => {
-    console.log (JSON.stringify (JSON.parse (req.body.data), null, '   '));
+    // console.log (JSON.stringify (JSON.parse (req.body.data), null, '   '));
     request ({
         method: 'POST',
         uri: 'https://cobalt-greyhound-5788.twil.io/createSyncMapItem',
@@ -35,6 +35,7 @@ router.post ('/createConference', (req, res) => {
             Data: req.body.data
         }
     }, (e, r, b) => {
+        console.log (b)
         res.json (JSON.parse (b));
         // res.json (JSON.parse (req.body.data));
     })

@@ -97,9 +97,10 @@ function create_conference (status) {
         });
         Delay (400).then (function () {
             Loading.page (true);
-            send_data ().then (function () {
+            send_data ().then (function (result) {
                 Delay (500).then (function () {
-                    jQuery ('#Confirm').addClass ('active')
+                    jQuery ('#Confirm').addClass ('active');
+                    jQuery ('.conference-id', '#Confirm').text (result.key)
                 })
             })
         })
