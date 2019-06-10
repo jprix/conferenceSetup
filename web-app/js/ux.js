@@ -120,7 +120,7 @@ function validate_fields () {
             valid = false;
     });
 
-    return true;
+    return valid;
 }
 
 function send_data () {
