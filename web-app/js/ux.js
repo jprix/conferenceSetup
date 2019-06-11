@@ -100,7 +100,7 @@ function create_conference (status) {
             send_data ().then (function (result) {
                 Delay (500).then (function () {
                     jQuery ('#Confirm').addClass ('active');
-                    jQuery ('.conference-id', '#Confirm').text (result.key)
+                    jQuery ('.conference-id', '#Confirm').text (result.conferenceId)
                 })
             })
         })
@@ -112,7 +112,7 @@ function create_conference (status) {
 
 function validate_fields () {
     var valid = true;
-    jQuery ('.participants .partecipant-row :input, .other-details :input').each (function () {
+    jQuery ('.participants .partecipant-row :input.required, .other-details :input').each (function () {
         var it  = jQuery (this),
             val = it.val().trim ();
 

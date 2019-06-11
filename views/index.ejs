@@ -73,15 +73,15 @@
                         <label><%= p.name %></label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" class="fullwidth" name="Name" data-name="Name" placeholder="<%= p.name %> Name" value="" autocomplete="asd">
+                        <input type="text" class="fullwidth <%= p.mandatory ? 'required' : '' %>" name="Name" data-name="Name" placeholder="<%= p.name %> Name" value="" autocomplete="asd">
                     </div>
                     <div class="col-md-3">
-                        <input type="text" class="fullwidth" name="sipUri" data-name="sipUri" placeholder="Contact" value="" autocomplete="off">
+                        <input type="text" class="fullwidth <%= p.mandatory ? 'required' : '' %>" name="sipUri" data-name="sipUri" placeholder="Contact" value="" autocomplete="off">
                     </div>
                     <div class="col-md-3 sipType">
-                        <input type="radio" class="form-check-input" name="radio__<%= ii %>" data-name="phoneType" value="e164" checked/>
+                        <input type="radio" class="form-check-input <%= p.mandatory ? 'required' : '' %>" name="radio__<%= ii %>" data-name="phoneType" value="e164" checked/>
                         <label for="phoneType">e164</label>
-                        <input type="radio" class="form-check-input" name="radio__<%= ii %>" data-name="phoneType" value="sip"/>
+                        <input type="radio" class="form-check-input <%= p.mandatory ? 'required' : '' %>" name="radio__<%= ii %>" data-name="phoneType" value="sip"/>
                         <label for="phoneType">SIP</label>
                     </div>
                 </div>

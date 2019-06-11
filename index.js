@@ -18,10 +18,10 @@ app.use (bodyParser.urlencoded({ extended: true }));
 router.get ('/', (req, res) => {
     res.render ('index.ejs', { ...SETTINGS, ...{
         partecipants: [
-            { name: 'Moderator', mod: true },
-            { name: 'Participant 1', mod: false },
-            { name: 'Participant 2', mod: false },
-            { name: 'Participant 3', mod: false }
+            { name: 'Moderator', mod: true, mandatory: true },
+            { name: 'Participant 1', mod: false, mandatory: true },
+            { name: 'Participant 2', mod: false, mandatory: false },
+            { name: 'Participant 3', mod: false, mandatory: false }
         ]
     }})
 });
@@ -30,13 +30,11 @@ router.post ('/createConference', (req, res) => {
     // console.log (JSON.stringify (JSON.parse (req.body.data), null, '   '));
     request ({
         method: 'POST',
-        uri: 'https://cobalt-greyhound-5788.twil.io/createSyncMapItem',
-        form: {
-            Data: req.body.data
-        }
+        uri: 'http://jprix.ngrok.io/createSyncMapItem',
+        json: JSON.parse (req.body.data)
     }, (e, r, b) => {
         console.log (b)
-        res.json (JSON.parse (b));
+        res.json (b);
         // res.json (JSON.parse (req.body.data));
     })
 });
