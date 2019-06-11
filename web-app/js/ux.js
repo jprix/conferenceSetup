@@ -128,6 +128,7 @@ function send_data () {
     var jD = jQuery.Deferred (),
         other_settings = jQuery ('.other-details :input').serializeMap (),
         request_json = {
+            "awsId": other_settings.awsId,
             "record": false,
             "beepOnEntry": false,
             "entryGreeting": other_settings.entryGreeting,
